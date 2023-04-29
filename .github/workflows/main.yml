@@ -36,7 +36,7 @@ jobs:
         run: godot -v --export "HTML5" build/web/index.html
 
       - name: Deploy
-        uses: Xander-Carroll/English2367Final@my-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/web
