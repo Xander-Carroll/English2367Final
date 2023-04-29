@@ -1,0 +1,65 @@
+{
+	"events": [
+		{
+			"character": "character-1681180548.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I killed a heart... Does that mean that I am a virus?...................."
+		},
+		{
+			"character": "character-1682735908.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This whole time....... Have I been killing something?......... Spreading disease?"
+		},
+		{
+			"character": "character-1682735908.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "White blood cells have been attacking me... Am I the bad guy?"
+		},
+		{
+			"character": "character-1681180548.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Should I keep going - even if I might be killing this being?"
+		},
+		{
+			"choice": "Keep Going",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"emit_signal": "0",
+			"event_id": "dialogic_040"
+		},
+		{
+			"choice": "Stop Killing",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"emit_signal": "1",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1682734097.json",
+		"name": "EndLevel3"
+	}
+}

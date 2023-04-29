@@ -1,0 +1,31 @@
+{
+	"events": [
+		{
+			"character": "character-1681180548.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ughhg... I think I ate too much... "
+		},
+		{
+			"character": "character-1681180548.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It's about time I undergo mitosis."
+		},
+		{
+			"character": "character-1681180548.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That means I have to find a way to split..."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1682542239.json",
+		"name": "OpeningLevel2"
+	}
+}

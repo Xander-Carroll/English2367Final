@@ -1,0 +1,118 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/menus/LevelSummary.gd" type="Script" id=1]
+[ext_resource path="res://res/fonts/OpenSans-Medium.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://res/fonts/OpenSans-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://src/tools/Fade.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.471795, 1 )
+colors = PoolColorArray( 0.490196, 0.309804, 0.309804, 1, 0.273438, 0.0801086, 0.0801086, 1, 0.490196, 0.309804, 0.309804, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 1024
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="Theme" id=5]
+Button/colors/font_color = Color( 0.592157, 0.592157, 0.592157, 1 )
+Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="LevelSummary" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+scale = Vector2( 1, 600 )
+z_index = -5
+texture = SubResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_right = -25.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginTop" type="MarginContainer" parent="VBoxContainer"]
+margin_right = 974.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_top = 29.0
+margin_right = 974.0
+margin_bottom = 112.0
+custom_fonts/font = SubResource( 3 )
+text = "Score in Videogames"
+align = 1
+
+[node name="MiddleSpacer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 116.0
+margin_right = 974.0
+margin_bottom = 491.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 0, 100 )
+size_flags_vertical = 3
+
+[node name="ScoreText" type="Label" parent="VBoxContainer/MiddleSpacer"]
+margin_top = 141.0
+margin_right = 974.0
+margin_bottom = 234.0
+custom_fonts/font = SubResource( 4 )
+text = "Score as a feature has been present in games since early in their creation."
+autowrap = true
+
+[node name="ButtonSpacer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 495.0
+margin_right = 974.0
+margin_bottom = 546.0
+
+[node name="Button" type="Button" parent="VBoxContainer/ButtonSpacer"]
+margin_left = 413.0
+margin_right = 561.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "Continue"
+flat = true
+
+[node name="MarginBottom" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 550.0
+margin_right = 974.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="FadeIn" parent="." instance=ExtResource( 5 )]
+
+[node name="FadeOut" parent="." instance=ExtResource( 5 )]
+
+[connection signal="pressed" from="VBoxContainer/ButtonSpacer/Button" to="." method="_on_Button_pressed"]
+[connection signal="finished" from="FadeOut" to="." method="_on_FadeOut_finished"]

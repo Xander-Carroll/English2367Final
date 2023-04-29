@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/levels/Level.gd" type="Script" id=1]
+[ext_resource path="res://src/tools/DialogHandler.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/levels/MainBackground.tscn" type="PackedScene" id=3]
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "The basic level template that all other levels will inherit."
+}
+SCORE_PREFIX = "Score: "
+
+[node name="Background" parent="." instance=ExtResource( 3 )]
+
+[node name="DialogHandler" parent="." instance=ExtResource( 2 )]

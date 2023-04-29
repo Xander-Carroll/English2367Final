@@ -1,0 +1,25 @@
+{
+	"events": [
+		{
+			"character": "character-1681180548.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Whoa... Eating these circles is making be bigger."
+		},
+		{
+			"character": "character-1681180548.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I need to find more!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1682449720.json",
+		"name": "FirstGrowth"
+	}
+}

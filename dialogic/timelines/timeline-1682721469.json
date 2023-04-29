@@ -1,0 +1,25 @@
+{
+	"events": [
+		{
+			"character": "character-1681180548.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "OhHhh... Urgh.. I think I have had too many pellets."
+		},
+		{
+			"character": "character-1681180548.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe I shouldn't eat any more."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1682721469.json",
+		"name": "TooMany"
+	}
+}
